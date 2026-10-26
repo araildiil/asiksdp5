@@ -97,7 +97,7 @@ which shows that new behavior can be plugged in without touching existing classe
 
 ## How to use
 
-```java
+```text
 Navigator navigator = new Navigator(new CarStrategy());
 System.out.println(navigator.planRoute("A", "B", 6.0));
 
@@ -109,7 +109,7 @@ System.out.println(navigator.planRoute("A", "B", 6.0));
 
 1. Create a new class in `src/navigation` that implements `RouteStrategy`:
 
-```java
+```text
 package navigation;
 
 public class BusStrategy implements RouteStrategy {
@@ -128,7 +128,7 @@ public class BusStrategy implements RouteStrategy {
 
 2. Use it in the client:
 
-```java
+```text
 navigator.setStrategy(new BusStrategy());
 ```
 
