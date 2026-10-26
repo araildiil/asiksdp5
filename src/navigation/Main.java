@@ -16,7 +16,6 @@ public class Main {
         navigator.setStrategy(new CycleStrategy());
         System.out.println(navigator.planRoute(from, to, distanceKm));
 
-        // Runtime switching with a lambda strategy, no existing class touched
         navigator.setStrategy((f, t, d) -> new Route("Scooter", f, t, d, (int) Math.round(d / 20.0 * 60)));
         System.out.println(navigator.planRoute(from, to, distanceKm));
     }
